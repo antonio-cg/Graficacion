@@ -1,0 +1,50 @@
+Graficación
+Practica 5, unidad 2
+
+1.-Hacer un applet que dibuje un rombo y realizar las siguientes transformaciones de traslación:
+
+a) dx = -100                         b)dx = 100
+   dy = 150                              dy = -150
+
+Dibujar de diferente color la figura resultante, las dos transformaciones se aplicaran sobre el objeto original.   
+
+2.-Hacer un applet que dibuje un trapecio y aplicar las siguientes transformaciones de traslación:
+
+a)  dx = 0              b)  dx = 20         c)  dx = 30
+   dy = 20                  dy =  -50           dy = 75
+  
+Dibujar de diferente color la figura resultante, las dos transformaciones se aplicaran sobre el objeto que vaya resultando de cada transformación. 
+
+3.-Hacer un applet que dibuje la figura             y aplicarle las siguientes transformaciones de escalación:
+
+a)Sx = 2 y Sy = 2           b)Sx = 0.5   y Sy = 0.5     c)Sx = 1.5 y Sy = 0.5                        d)Sx = 0.5  y Sy = 1.5
+
+Para cada escalación tomar en consideración los puntos fijos siguientes:
+a)Punto fijo ubicado en el origen de las coordenadas
+b)Punto fijo ubicado en el centro de la figura
+c)Punto fijo ubicado en un vértice (o punto) de la figura
+d)Punto fijo ubicado en un punto fuera de la figura
+
+Todas las escalaciones se harán sobre el dibujo original, a cada grupo de figuras resultante asignarle un color diferente, los grupos de figuras asociarlos de acuerdo a la posición del punto fijo. Al final se tendrán 17 figuras, 4 de cada grupo y la original.
+
+4.-Hacer un applet que dibuje una flecha                                y aplicar las siguientes transformaciones de rotación:
+a)  = 45º                b)  = 90º               c)  = 135º                   c)  = 180º
+
+Para cada ángulo de rotación tomar en consideración los siguientes puntos de rotación:
+a)Ubicado en el origen de las coordenadas
+b)Ubicado en el centro de la figura
+c)Ubicado en un vértice (o punto) de la figura
+d)Ubicado en un punto fuera de la figura
+  
+Todas las rotaciones se harán sobre el dibujo original, a cada grupo de figuras resultante asignarle un color diferente, los grupos de figuras asociarlos de acuerdo a la posición del punto de rotación. Al final se tendrán 17 figuras, 4 de cada grupo y la original.
+
+5.-Hacer un applet que dibuje la figura:                     y aplicar las siguientes transformaciones:
+a)Sx = 2 y Sy = 2
+b)  = 45º
+c)Sx = 1 y Sy = 0.5
+d)dx=50 y dy = -25
+e)   = 90º
+f)Sx = 1.5 y Sy = 1
+g)dx=20 y dy = 40
+
+Dibujar el objeto original de color negro, las figuras que van resultando en el proceso de cada transformación en rojo, y la figura final (a la que se le aplicó la transformación g) de color azul. Cada transformación se va a ir aplicando al objeto resultante de una transformación anterior.

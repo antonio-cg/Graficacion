@@ -6,33 +6,104 @@
 package Funciones;
 
 import java.awt.Graphics;
+import java.awt.Point;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+import java.util.ArrayList;
 
 /**
  *
- * @author antoniocg
+ * @author antonio Caro Guerrero
  */
 public class Plano extends javax.swing.JPanel implements ComponentListener  {
 
     /**
      * Creates new form Plano
      */
-    int x = 0;
-    int y = 0;
+   
+    ArrayList<Poligono> Figuras = new ArrayList();
+    public int  _x=getBounds().width/2;
+    public int  _y = getBounds().height/2;
     
     
     @Override
     public void paintComponent(Graphics g) {
-      Recta.dibujaRecta(0,(int)getHeight()/2,getWidth(),(int)getHeight()/2,g);
-       Recta.dibujaRecta((int)getWidth()/2,0, (int)getWidth()/2,getHeight(), g);
-      super.paintComponents(g); //To change body of generated methods, choose Tools | Templates.
+        
+        dibujaRecta(g);
+        super.paintComponents(g); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+     public Poligono convertirACartesiano(Poligono _fig)
+    {
+        Poligono fig = _fig;
+        for (int i = 0; i < fig.Puntos.size(); i++) {
+            fig.Puntos.set(i, convertirPunti(fig.Puntos.get(i)));
+        }
+     return fig;   
+    }
+     /**
+      * Convierte puntos dados en formato plano cartesiano a formato plano de java
+      * @param punto Punto al cual se transformara
+      * @return punto modificado
+      */
+     public Point convertirPunti(Point punto)
+     {
+         int x;
+         int y;
+         
+         if(punto.getX()<0)
+         {
+             x = _x - (int)punto.getX();
+         }
+         else
+         {
+             x = _x + (int)punto.getX();
+         } 
+         
+         if(punto.getY()<0)
+         {
+             y= _y + (int)punto.getY();
+         }
+         else
+         {
+             y= _y - (int)punto.getY();
+         } 
+         Point Puntonuevo;
+         Puntonuevo = new Point (x,y);
+         return Puntonuevo;
+     }
+     
+    public void dibujaRecta(Graphics g)
+    {
+      g.fillOval(_x-2,_y-2, 5, 5);
+      Recta.dibujaRecta(0,(int)getHeight()/2,getWidth(),(int)getHeight()/2,g);
+      Recta.dibujaRecta((int)getWidth()/2,0, (int)getWidth()/2,getHeight(), g);
+      
+    }
     public Plano() {
         initComponents();
     }
-
+    public void dibujaPoligono(Graphics g)
+    {
+        for(int i = 0;i<Figuras.size();i++)
+        {
+            Figuras.get(i).DibujaPoligono(g);
+        }
+    }
+    
+    public void dibujaPolinea(Graphics g)
+    {
+        for(int i = 0;i<Figuras.size();i++)
+        {
+            Figuras.get(i).DibujaPolilinea(g);
+        }
+        
+    }
+    
+    public void anadeFigura(Poligono fig)
+    {
+        Figuras.add(fig);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -60,6 +131,8 @@ public class Plano extends javax.swing.JPanel implements ComponentListener  {
 
     @Override
     public void componentResized(ComponentEvent e) {
+        _x=getBounds().width/2;
+        _y = getBounds().height/2;
         repaint();
     }
 

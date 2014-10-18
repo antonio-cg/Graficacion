@@ -35,24 +35,39 @@ public class Recta {
      */
     public static void dibujaRecta(int x0,int y0,int x1,int y1,Graphics g)
     {
+        //si los valores iniciales son mayores a los puntos finales los invertimos
+       
+        int y,x;
+        int temp=0;
+        if(x0>x1)
+        {
+           
+             
+            temp=x1;
+            x1=x0;
+            x0=temp;
+           
+            temp=y1;
+         
+            y1=y0;
+            y0=temp;
+            
+        }
+        
+        
+     
+
         //calculamos el valos de la pendiente
           double m=CalculaM(x0,x1,y0,y1);
           
-          int y,x;
-       
+          
+          
         
        if(m==0)
           {
              
              y=y0;
-             if(x0>x1)
-             {
-                for(x=x1;x<=x0;x++){
-               
-                     Pixel.dibujaPixel(g,x, y ,1);
-                } 
-             }
-             else
+           
                 for(x=x0;x<=x1;x++){
                
                      Pixel.dibujaPixel(g,x, y ,1);
@@ -64,6 +79,7 @@ public class Recta {
           else if((x1-x0)==0)
           {
              x=x0;
+             
              for(y=y0;y<=y1;y++)
                  Pixel.dibujaPixel(g,x, y ,1);
 
@@ -94,6 +110,7 @@ public class Recta {
          
           else if(m<1)
           {
+              
              for(x=x0;x<=x1;x++)
              {
                 y=(int)Math.round(y0+m*(x-x0));

@@ -21,7 +21,7 @@ public class Plano extends javax.swing.JPanel implements ComponentListener  {
      * Creates new form Plano
      */
    
-    ArrayList<Poligono> Figuras = new ArrayList();
+    public ArrayList<Poligono> Figuras = new ArrayList();
     public int  _x=getBounds().width/2;
     public int  _y = getBounds().height/2;
     
@@ -36,6 +36,7 @@ public class Plano extends javax.swing.JPanel implements ComponentListener  {
      public Poligono convertirACartesiano(Poligono _fig)
     {
         Poligono fig = _fig;
+       
         for (int i = 0; i < fig.Puntos.size(); i++) {
             fig.Puntos.set(i, convertirPunti(fig.Puntos.get(i)));
         }
@@ -48,26 +49,34 @@ public class Plano extends javax.swing.JPanel implements ComponentListener  {
       */
      public Point convertirPunti(Point punto)
      {
-         int x;
-         int y;
-         
-         if(punto.getX()<0)
+         int x=0;
+         int y=0;
+         switch(Integer.signum((int)punto.getX()))
          {
-             x = _x - (int)punto.getX();
+             case -1:
+                
+                 x = _x - (int)punto.getX();
+                 break;
+             case 1:
+                 x = _x + (int)punto.getX();
+                 break;
          }
-         else
+               
+         switch(Integer.signum((int)punto.getY()))
          {
-             x = _x + (int)punto.getX();
-         } 
-         
-         if(punto.getY()<0)
-         {
-             y= _y + (int)punto.getY();
+             case -1:
+               
+                 y= _y + (int)punto.getY();
+                 break;
+             case 1:
+                
+                 y= _y - (int)punto.getY();
+                 break;
          }
-         else
-         {
-             y= _y - (int)punto.getY();
-         } 
+        
+         
+          
+         
          Point Puntonuevo;
          Puntonuevo = new Point (x,y);
          return Puntonuevo;
@@ -83,6 +92,8 @@ public class Plano extends javax.swing.JPanel implements ComponentListener  {
     public Plano() {
         initComponents();
     }
+    
+    
     public void dibujaPoligono(Graphics g)
     {
         for(int i = 0;i<Figuras.size();i++)

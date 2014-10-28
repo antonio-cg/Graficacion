@@ -49,36 +49,36 @@ public class Plano extends javax.swing.JPanel implements ComponentListener  {
       */
      public Point convertirPunti(Point punto)
      {
-         int x=0;
-         int y=0;
-         switch(Integer.signum((int)punto.getX()))
+         Point Puntonuevo;
+         double x=punto.getX();
+         double y=punto.getY();
+         
+         if(x>=0 & y>=0)
          {
-             case -1:
-                
-                 x = _x - (int)punto.getX();
-                 break;
-             case 1:
-                 x = _x + (int)punto.getX();
-                 break;
+             x=_x+x;
+             y=_y-y;
          }
-               
-         switch(Integer.signum((int)punto.getY()))
+         else if(x<=0 & y>=0)
          {
-             case -1:
-               
-                 y= _y + (int)punto.getY();
-                 break;
-             case 1:
-                
-                 y= _y - (int)punto.getY();
-                 break;
+             x=_x+x;
+             y=_y-y;
          }
-        
+         else if(x<=0 & y<=0)
+         {
+             x=_x+x;
+             y=_y-y;
+         }
+         else if(x>=0 & y<=0) 
+         {
+             x=_x+x;
+             y=_y-y;
+         }
+         
          
           
          
-         Point Puntonuevo;
-         Puntonuevo = new Point (x,y);
+         
+         Puntonuevo = new Point ((int)x,(int)y);
          return Puntonuevo;
      }
      

@@ -65,11 +65,8 @@ public class Recta {
         
        if(m==0)
           {
-             
              y=y0;
-           
                 for(x=x0;x<=x1;x++){
-               
                      Pixel.dibujaPixel(g,x, y ,1);
                 }
            }

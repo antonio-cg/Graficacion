@@ -2,6 +2,7 @@
 package Practicas.p5;
 
 import Funciones.Poligono;
+import Funciones.TrHomogeneas;
 import Funciones.Transformaciones;
 import java.applet.Applet;
 import java.awt.Graphics;
@@ -37,12 +38,14 @@ public class P1 extends Funciones.Plano
         rombo2.AgregaPunto(-100,-120);
         rombo2 = Transformaciones.Escalacion(rombo2,2,2);
         rombo2 = rombo2;
-        
-       
-       convertirACartesiano(rombo);
+        double[][] m= rombo.MatrizH();
+        TrHomogeneas temp = new TrHomogeneas();
+        m=temp.multMat(temp.RefleLineaMX(),m);
+        rombo.regresaPuntos(m);
+         convertirACartesiano(rombo);
         convertirACartesiano(rombo2);
         anadeFigura(rombo);
-         anadeFigura(rombo2);
+        // anadeFigura(rombo2);
         
         //rombo = Transformaciones.rotacionPunto(rombo,300,100,180);
        

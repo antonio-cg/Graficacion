@@ -14,17 +14,17 @@ import java.awt.Point;
 public class Transformaciones {
     /**
       * Método que implementa la Translación de un poligono 
-      * @param poli Poligono al que se le aplicacara la escalacion
+      * @param _poli Poligono al que se le aplicacara la escalacion
       * @param dx Constante de translación de x
       * @param dy Constante de translación de y
       * @return Un objeto de tipo poligono con las cordenadas modificadas. 
       */
-    public static Poligono Translacion(Poligono _poli,int dx, int dy)
+    public static Poligono Translacion(Poligono _poli,double dx, double dy)
     {
-       Poligono poli=_poli;
+       Poligono poli=Poligono.newInstance(_poli);
         for(int i = 0;i<poli.Puntos.size();i++)
         {
-            poli.Puntos.set(i, new Point((int)poli.Puntos.get(i).getX()+dx,(int)poli.Puntos.get(i).getY()+dy));
+            poli.Puntos.set(i, new Point((int)(poli.Puntos.get(i).getX()+dx),(int)(poli.Puntos.get(i).getY()+dy)));
         }
         return poli;
     }
@@ -35,12 +35,12 @@ public class Transformaciones {
       * @param Sy Constante de escalacion de y
       * @return Un objeto de tipo poligono con las cordenadas modificadas. 
       */
-     public static Poligono Escalacion(Poligono _poli,int Sx, int Sy)
+     public static Poligono Escalacion(Poligono _poli,double Sx, double Sy)
     {
        Poligono poli=_poli;
         for(int i = 0;i<poli.Puntos.size();i++)
         {
-            poli.Puntos.set(i, new Point((int)poli.Puntos.get(i).getX()*Sx,(int)poli.Puntos.get(i).getY()*Sy));
+            poli.Puntos.set(i, new Point((int)(poli.Puntos.get(i).getX()*Sx),(int)(poli.Puntos.get(i).getY()*Sy)));
         }
         return poli;
     }
@@ -53,19 +53,19 @@ public class Transformaciones {
       * @param Yf Punto fijo en y, en el cual se aplicará la escalación
       * @return Un objeto de tipo poligono con las cordenadas modificadas. 
       */
-   public static Poligono EscalacionPf(Poligono _poli,int Sx, int Sy,int Xf,int Yf)
+   public static Poligono EscalacionPf(Poligono _poli,double Sx, double Sy,int Xf,int Yf)
     {
         Poligono poli=_poli;
-       int tempx = Xf*(1-Sx);
-       int tempy = Yf*(1-Sy);
+       double tempx = Xf*(1-Sx);
+       double tempy = Yf*(1-Sy);
         for(int i = 0;i<poli.Puntos.size();i++)
         {
-            poli.Puntos.set(i, new Point((int)poli.Puntos.get(i).getX()*Sx+tempx,(int)poli.Puntos.get(i).getY()*Sy+tempy));
+            poli.Puntos.set(i, new Point((int)(poli.Puntos.get(i).getX()*Sx+tempx),(int)(poli.Puntos.get(i).getY()*Sy+tempy)));
         }
         return poli;
     }
    
-   public static Poligono rotacionOrigen(Poligono _poli,int angulo)
+   public static Poligono rotacionOrigen(Poligono _poli,double angulo)
    {
        Poligono poli = _poli;
        double angle = ((angulo*Math.PI)/180);
@@ -78,7 +78,7 @@ public class Transformaciones {
        return poli;
    } 
    
-   public static Poligono rotacionPunto(Poligono _poli,int angulo,int yr, int xr)
+   public static Poligono rotacionPunto(Poligono _poli,double angulo,int yr, int xr)
    {
        Poligono poli = _poli;
        double angle = ((angulo*Math.PI)/180);

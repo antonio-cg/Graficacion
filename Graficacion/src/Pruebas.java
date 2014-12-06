@@ -25,37 +25,144 @@ public class Pruebas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        p12 = new Practicas.p5.P1();
+        jPanel2 = new javax.swing.JPanel();
+        pa41 = new Practicas.p5.Pa4();
+        pa51 = new Practicas.p5.Pa5();
+        Practica1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        pa12 = new Practicas.p5.Pa1();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        pa21 = new Practicas.p5.Pa2();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        pa31 = new Practicas.p5.Pa3();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        pa42 = new Practicas.p5.Pa4();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        pa52 = new Practicas.p5.Pa5();
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout p12Layout = new javax.swing.GroupLayout(p12);
-        p12.setLayout(p12Layout);
-        p12Layout.setHorizontalGroup(
-            p12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 609, Short.MAX_VALUE)
+        Practica1.setName("Practica1"); // NOI18N
+
+        javax.swing.GroupLayout pa12Layout = new javax.swing.GroupLayout(pa12);
+        pa12.setLayout(pa12Layout);
+        pa12Layout.setHorizontalGroup(
+            pa12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 429, Short.MAX_VALUE)
         );
-        p12Layout.setVerticalGroup(
-            p12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 512, Short.MAX_VALUE)
+        pa12Layout.setVerticalGroup(
+            pa12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 355, Short.MAX_VALUE)
         );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(pa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(148, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(pa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(139, Short.MAX_VALUE))
+        );
+
+        Practica1.addTab("Parte 1", jPanel1);
+
+        javax.swing.GroupLayout pa21Layout = new javax.swing.GroupLayout(pa21);
+        pa21.setLayout(pa21Layout);
+        pa21Layout.setHorizontalGroup(
+            pa21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 614, Short.MAX_VALUE)
+        );
+        pa21Layout.setVerticalGroup(
+            pa21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 481, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab1", pa21);
+
+        Practica1.addTab("Parte 2", jTabbedPane1);
+
+        javax.swing.GroupLayout pa31Layout = new javax.swing.GroupLayout(pa31);
+        pa31.setLayout(pa31Layout);
+        pa31Layout.setHorizontalGroup(
+            pa31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 614, Short.MAX_VALUE)
+        );
+        pa31Layout.setVerticalGroup(
+            pa31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 481, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("tab1", pa31);
+
+        Practica1.addTab("Parte 3", jTabbedPane2);
+
+        javax.swing.GroupLayout pa42Layout = new javax.swing.GroupLayout(pa42);
+        pa42.setLayout(pa42Layout);
+        pa42Layout.setHorizontalGroup(
+            pa42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 614, Short.MAX_VALUE)
+        );
+        pa42Layout.setVerticalGroup(
+            pa42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 481, Short.MAX_VALUE)
+        );
+
+        jTabbedPane3.addTab("tab1", pa42);
+
+        Practica1.addTab("parte 4", jTabbedPane3);
+
+        javax.swing.GroupLayout pa52Layout = new javax.swing.GroupLayout(pa52);
+        pa52.setLayout(pa52Layout);
+        pa52Layout.setHorizontalGroup(
+            pa52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 614, Short.MAX_VALUE)
+        );
+        pa52Layout.setVerticalGroup(
+            pa52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 481, Short.MAX_VALUE)
+        );
+
+        jTabbedPane4.addTab("tab1", pa52);
+
+        Practica1.addTab("Parte 5", jTabbedPane4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(55, Short.MAX_VALUE)
-                .addComponent(p12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(Practica1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(p12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(Practica1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
+
+        Practica1.getAccessibleContext().setAccessibleName("Practica 5");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -96,6 +203,19 @@ public class Pruebas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Practicas.p5.P1 p12;
+    private javax.swing.JTabbedPane Practica1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
+    private Practicas.p5.Pa1 pa12;
+    private Practicas.p5.Pa2 pa21;
+    private Practicas.p5.Pa3 pa31;
+    private Practicas.p5.Pa4 pa41;
+    private Practicas.p5.Pa4 pa42;
+    private Practicas.p5.Pa5 pa51;
+    private Practicas.p5.Pa5 pa52;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,7 @@
  */
 package Funciones;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.util.ArrayList;
@@ -14,9 +15,28 @@ import java.util.ArrayList;
  *Clase que podra guardar los puntos de un poligono y dibujarlos
  *@author antoniocg
  */
-public class Poligono {
-    public ArrayList<Point> Puntos = new ArrayList();
+public class Poligono implements Cloneable{
     
+   public ArrayList<Point> Puntos = new ArrayList();
+   
+   public static Poligono newInstance(Poligono p) {
+    Poligono e = new Poligono();
+        e.setPuntos(p.Puntos);
+       return e;
+  }
+
+   public void setPuntos(ArrayList<Point> p)
+   {
+       this.Puntos = p;
+   }
+   
+   public ArrayList getPuntos(){
+           return (ArrayList)Puntos.clone();
+   }
+   public Poligono()
+   {}
+           
+            
     /**
      * MEtodo que regresa una matriz de double con los puntos en formato normalizado
      * 
@@ -64,8 +84,10 @@ public class Poligono {
      
 
     //Clase que dibuja un poligono
-    public void DibujaPolilinea(Graphics g)
+    public void DibujaPolilinea(Graphics g,Color c)
     {
+        Color antes = g.getColor();
+        g.setColor(c);
             System.out.println(Puntos.size());
 
             if(Puntos.size()<2)
@@ -88,11 +110,14 @@ public class Poligono {
                     }while(i!=Puntos.size());
 
             }
+            g.setColor(antes);
     }
 
 
-    public void DibujaPoligono(Graphics g)
+    public void DibujaPoligono(Graphics g,Color c)
     {
+        Color antes = g.getColor();
+        g.setColor(c);
             if(Puntos.size()<3)
             {
                     System.out.println("tiene que haber mas de tres lineas");
@@ -113,6 +138,19 @@ public class Poligono {
                             }
                      }
             }
-    
+    g.setColor(antes);
     }
+    
+   @Override
+     public Object clone() {
+        try {
+            return super.clone();
+        }
+        catch (CloneNotSupportedException e) {
+            // This should never happen
+            throw new InternalError(e.toString());
+        }
+    }
+    
+    
 }

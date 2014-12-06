@@ -168,7 +168,7 @@ public class TrHomogeneas {
       * @param b contirne la matriz b 
       * @return la multiplicacion de la matriz a y b.
       */
-  public static double[][] multMat(double[][] a,double[][] b){
+  public  double[][] multMat(double[][] a,double[][] b){
       
       double[][] c=new double[a.length][b[0].length];
       for(int i=0;i<c.length;i++)
